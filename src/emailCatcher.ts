@@ -33,11 +33,7 @@ class EmailManager{
     {
         return new Promise((resolve,reject)=>{
             this.ref = new Firebase('https://blazing-inferno-1723.firebaseio.com/');
-<<<<<<< HEAD
             this.ref.authWithCustomToken(Credentials.getFirebaseCredentials(),(success)=>{
-=======
-            this.ref.authWithCustomToken('os7EDde2KIs8ymV1gjodaQPzaPG0UmEziqlMCOmN',(success)=>{
->>>>>>> b187be6f1cfac8b1e7545a983cc1ee952570a6df
                 return resolve("true");
             },(error)=>{
                 this.logError(error);
