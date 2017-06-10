@@ -2,10 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Firebase = require('Firebase'), querystring = require('querystring'), fs = require('fs'), http = require('http'), colors = require('colors'), nodemailer = require('nodemailer');
 var Credentials_1 = require("./Credentials");
-// import * as Firebase from 'Firebase';
-// import * as querystring from 'querystring';
-// import * as fs from 'fs';
-// import * as http from 'http';
 var EmailManager = (function () {
     function EmailManager() {
         var _this = this;

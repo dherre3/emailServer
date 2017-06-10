@@ -4,14 +4,7 @@ const Firebase = require('Firebase'),
       http = require('http'),
       colors = require('colors'),
       nodemailer = require('nodemailer');
-
 import {Credentials} from './Credentials';
-
-// import * as Firebase from 'Firebase';
-// import * as querystring from 'querystring';
-// import * as fs from 'fs';
-// import * as http from 'http';
-
 
 class EmailManager{
     public ref = new Firebase('https://blazing-inferno-1723.firebaseio.com/');
