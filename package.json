@@ -1,0 +1,39 @@
+{
+  "name": "email-catcher",
+  "version": "1.0.0",
+  "description": "Grabs e-mail from Firebase and sends to my personal e-mail",
+  "main": "emailCatcher.js",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "firebase": "^2.4.2",
+    "nodemailer": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.29",
+    "gulp": "^3.9.1",
+    "gulp-add-src": "^0.2.0",
+    "gulp-typescript": "^3.1.7",
+    "typescript": "^2.3.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dherre3/emailServer.git"
+  },
+  "keywords": [
+    "E-mail",
+    "automatic",
+    "sending",
+    "firebase",
+    "personal",
+    "website"
+  ],
+  "author": "David Herrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dherre3/emailServer/issues"
+  },
+  "homepage": "https://github.com/dherre3/emailServer#readme"
+}
