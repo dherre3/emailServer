@@ -7,7 +7,7 @@ const Firebase = require('Firebase'),
 import {Credentials} from './Credentials';
 
 class EmailManager{
-    public ref = new Firebase('https://blazing-inferno-1723.firebaseio.com/');
+    public ref; //Firebase ref
     private error_log_path = '../error-log.txt';
     private log_path = '../log.txt';
     constructor()
@@ -25,8 +25,15 @@ class EmailManager{
     private authenticate()
     {
         return new Promise((resolve,reject)=>{
-            this.ref = new Firebase('https://blazing-inferno-1723.firebaseio.com/');
-            this.ref.authWithCustomToken(Credentials.getFirebaseCredentials(),(success)=>{
+            /*
+            * let credentials = { 
+                url:"<firebase-database-url>",
+                token:"<firebase-secret>"
+              };
+            */
+            let credentials = Credentials.getFirebaseCredentials();
+            this.ref = new Firebase(credentials.url);
+            this.ref.authWithCustomToken(credentials.token,(success)=>{
                 return resolve("true");
             },(error)=>{
                 this.logError(error);
@@ -60,6 +67,7 @@ class EmailManager{
         const password = Credentials.getCredentials();
 
         // create reusable transporter object using the default SMTP transport
+        //For more options check: https://nodemailer.com/smtp/
         let transporter = nodemailer.createTransport({
             host: 'Smtp.gmail.com',
             port: 587,
